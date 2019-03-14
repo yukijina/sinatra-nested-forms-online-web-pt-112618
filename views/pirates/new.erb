@@ -2,16 +2,24 @@
 
 <form action="/pirates" method="post">
   <label for="name">Pirates Name:</label>
-  <input type="text" name="pirates[name]">
+  <input type="text" name="pirate[name]"><br>
   <label for="weight">Pirates Weight:</label>
-  <input type="text" name="pirates[weight]"">
+  <input type="text" name="pirate[weight]"><br>
   <label for="height">Pirates Height:</label>
-  <input type="text" name="pirates[height]">
-  <label for="ship_name">Ships Name:</label>
-  <input type="text" id="ship_name_1" name="pirates[ships][][name]">
-  <label for="ship_type">Ships Type</label>
-  <input type="text" name="pirates[ships][][type]">
-  <label for="ship_booty">Ships Booty</label>
-  <input type="text" name="pirates[ships][][booty]">
+  <input type="text" name="pirate[height]"><br>
+
+  <label for="ship_name">Ship Name :</label>
+  <input type="text" id="ship_name_1" name="pirate[ships][][name]" placeholder="1">
+  <input type="text" id="ship_name_2" name="pirate[ships][][name]" placeholder="2"><br>
+
+  <label for="ship_type">Ship Type :</label>
+  <input type="text" id="ship_type_1" name="pirate[ships][][type]" placeholder="1">
+  <input type="text" id="ship_type_2" name="pirate[ships][][type]" placeholder="2"><br>
+
+  <label for="ship_booty">Ship Booty :</label>
+  <input type="text" id="ship_booty_1" name="pirate[ships][][booty]" placeholder="1">
+  <input type="text" id="ship_booty_2" name="pirate[ships][][booty]" placeholder="2"><br>
+
+  <button type="submit" name="submit">Submit</button>
 
 </form>

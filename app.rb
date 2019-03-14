@@ -8,17 +8,17 @@ module FormsLab
     end
 
     get '/new' do
-
-      erb :new
+      erb :"pirates/new"
     end
 
     post '/pirates' do
+      binding.pry
       @name = params[:pirate][:name]
       @weight = params[:pirate][:weight]
       @height = params[:pirate][:height]
-      @ship_name = params[:pirate][:ships][:name]
-
-      erb :show
+      @ships = params[:pirate][:ships]
+      Pirate.new(@name, @weight, @height)
+      erb :"pirates/show"
     end
 
 
