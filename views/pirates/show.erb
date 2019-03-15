@@ -3,26 +3,13 @@
   <p>Pirate Weight: <%= @weight %></p>
   <p>Pirate Height: <%= @height %></p>
 
-  <!-- We can also do: -->
-  <!--<div>
-    <% Pirate.all.each do |p| %>
-      <%= p.name %>
-    <% end %>
-  </div>-->
-
 <h2>Display your first ship here</h2>
-  <ul>
-    <li><%= @ships[0][:name]%></li>
-    <li><%= @ships[0][:type]%></li>
-    <li><%= @ships[0][:booty]%></li>
+  <ul><% @all_ships.each do |ship| %>
+    <li><%= ship.name %></li>
+    <li><%= ship.type %></li>
+    <li><%= ship.booty %></li>
+  <% end %>
   </ul>
-
-
 
 
 <h2>Display your second ship here</h2>
-  <ul>
-    <li><%= @ships[1][:name]%></li>
-    <li><%= @ships[1][:type]%></li>
-    <li><%= @ships[1][:booty]%></li>
-  </ul>
